@@ -1,4 +1,4 @@
-// Is this working?
+:last-child// Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,6 +54,42 @@ table {
 }
 
 html, body {
-    height: 100%;
+		height: 100%;
+		font-family: sans-serif;
 }
 
+	// max width for website
+	@maxWidthWebsite: 800px;
+
+	// base font sizes
+	@defaultFontSize: 62.5%;
+
+	// styles
+	:root {
+  font-size: @defaultFontSize;
+
+	//fonts
+	@h1: 2rem;
+	@h2: 1.5rem;
+	@h3: 1.75rem;
+	@h4: 1.25rem;
+
+
+.container {
+	margin: 0 auto;
+	max-width: @maxWidthWebsite;
+	}
+
+	// nav {
+	// 	text decoration: none;
+
+	// }
+
+	section .intro {
+		background-color: grey;
+	}
+
+	.intro.mainimage{
+		width: 30%;
+		height: 30%;
+	}
