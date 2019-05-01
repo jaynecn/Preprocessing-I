@@ -75,10 +75,15 @@ html, body {
 	@h4: 1.75rem;
 	@h5: 1.5rem;
 	@p: 1.25rem;
+	
 
 	//children styling
 	@child-padding: 1rem;
 	@child-paragraph: .5rem 0rem .75rem 0rem;
+
+	// mobile breakpoint
+
+	@mobileMode: 500px;
 	
 
 
@@ -111,7 +116,9 @@ html, body {
 	header{
 		display: flex;
 		justify-content: flex-end;
-		wrap: nowrap;
+		@media(max-width: @mobileMode) {
+      justify-content: center;
+    }
 
 		nav {
 			font-size: @h4;
@@ -122,21 +129,40 @@ html, body {
 			color: darkslateblue;
 			padding: .5rem;
 		}
-		}
+	}
 
 	intro {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		background-color: lightgrey;
-		padding: 2rem 0rem 1rem 0.5rem;
-		width: 100%;
+		padding: 2rem 1rem 1rem 1rem;
+
+		@media(max-width: @mobileMode) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 1rem;
+			padding: 2rem;
+		}
 
 		#main-intro {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 100%;
+			@media(max-width: @mobileMode) {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: flex-start;
+				h1 {
+					order: 0; 
+					width: 100%;
+				}
+				.mainimage {
+					order: 1;
+					width: 100%;
+				}
+			}	
 			h1 {
 				order: 0; 
 				width: 49%;
@@ -147,7 +173,10 @@ html, body {
 			}
 		}
 		h2 {
-			padding: 1.5rem;
+			padding: @child-padding;
+		}
+		p {
+			padding: @child-padding;
 		}
 		
 		.button {
