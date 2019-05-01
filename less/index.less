@@ -75,6 +75,10 @@ html, body {
 	@h4: 1.75rem;
 	@h5: 1.5rem;
 	@p: 1.25rem;
+
+	//children styling
+	@child-padding: 1rem;
+	@child-paragraph: .5rem 0rem .75rem 0rem;
 	
 
 
@@ -116,15 +120,16 @@ html, body {
 		nav a {
 			text-decoration: none;
 			color: darkslateblue;
+			padding: .5rem;
 		}
 		}
 
 	intro {
-		background-color: lightgrey;
-		padding: 2rem 0rem 1rem 0.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		background-color: lightgrey;
+		padding: 2rem 0rem 1rem 0.5rem;
 		width: 100%;
 
 		#main-intro {
@@ -135,7 +140,6 @@ html, body {
 			h1 {
 				order: 0; 
 				width: 49%;
-				// padding: 2rem 4rem 2rem 1rem;
 			}
 			.mainimage {
 				order: 1;
@@ -143,7 +147,7 @@ html, body {
 			}
 		}
 		h2 {
-			margin: 1rem;
+			padding: 1.5rem;
 		}
 		
 		.button {
@@ -167,15 +171,55 @@ html, body {
 
 	main {
 		display: flex;
-		// flex-direction: column;
+		justify-content: space-between;
+		margin: 1rem;
 		.skills {
-			order: 0;
-			width: 60%;
-			padding: 1rem;
+			width: 70%;
+			padding: @child-padding;
+			h2 {
+				padding-bottom: 1.5rem;
+			}
+			p {
+				padding: @child-paragraph;
+			}
 		}
-		.list {
-
+		.list { 
+			order: 1
+			width: 30%;
+			padding: @child-padding;
+			background-color: whitesmoke;
+			li {
+				padding: @child-paragraph
+			}
 		}
+	}
 
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: @child-padding;
+		margin: 1rem;
+		h3 {
+			padding: @child-paragraph;
+		}
+		th {
+			font-size: @h5;
+			padding: @child-paragraph;
+			font-weight: bold;
+			text-align: left;
+		}
+		td {
+			font-size: @p;
+			padding: @child-paragraph;
+		}
+	}
 
+	footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: lightgrey;
+		padding: @child-padding;
+		color: white;
 	}

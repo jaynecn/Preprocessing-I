@@ -171,13 +171,14 @@ header nav {
 header nav a {
   text-decoration: none;
   color: darkslateblue;
+  padding: 0.5rem;
 }
 intro {
-  background-color: lightgrey;
-  padding: 2rem 0rem 1rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: lightgrey;
+  padding: 2rem 0rem 1rem 0.5rem;
   width: 100%;
 }
 intro #main-intro {
@@ -195,7 +196,7 @@ intro #main-intro .mainimage {
   width: 35%;
 }
 intro h2 {
-  margin: 1rem;
+  padding: 1.5rem;
 }
 intro .button {
   order: 4;
@@ -214,9 +215,53 @@ intro .button a {
 }
 main {
   display: flex;
+  justify-content: space-between;
+  margin: 1rem;
 }
 main .skills {
-  order: 0;
-  width: 60%;
+  width: 70%;
   padding: 1rem;
+}
+main .skills h2 {
+  padding-bottom: 1.5rem;
+}
+main .skills p {
+  padding: 0.5rem 0rem 0.75rem 0rem;
+}
+main .list {
+  order: 1
+			width: 30%;
+  padding: 1rem;
+  background-color: whitesmoke;
+}
+main .list li {
+  padding: 0.5rem 0rem 0.75rem 0rem;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+}
+section h3 {
+  padding: 0.5rem 0rem 0.75rem 0rem;
+}
+section th {
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem 0.75rem 0rem;
+  font-weight: bold;
+  text-align: left;
+}
+section td {
+  font-size: 1.25rem;
+  padding: 0.5rem 0rem 0.75rem 0rem;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+  padding: 1rem;
+  color: white;
 }
