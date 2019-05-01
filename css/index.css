@@ -151,7 +151,13 @@ body {
   font-size: 1.75rem;
 }
 #container h5 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+#container p {
+  font-size: 1.25rem;
+}
+#container ul li {
+  font-size: 1.5rem;
 }
 header {
   display: flex;
@@ -189,19 +195,28 @@ intro #main-intro .mainimage {
   width: 35%;
 }
 intro h2 {
-  margin: 0.5rem;
+  margin: 1rem;
 }
 intro .button {
   order: 4;
-  width: 20%;
-  border: 1px solid blue;
+  width: 25%;
+  border: 1px solid black;
   margin: 1rem 2rem 1rem 5rem;
-  padding: 1rem 0rem 1rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
   background-color: white;
   text-align: center;
   align-items: center;
+  font-size: 1.25rem;
 }
-intro .mainimage {
-  width: 40%;
-  height: 40%;
+intro .button a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+main {
+  display: flex;
+}
+main .skills {
+  order: 0;
+  width: 60%;
+  padding: 1rem;
 }
