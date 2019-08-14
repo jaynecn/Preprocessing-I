@@ -69,7 +69,7 @@ html, body {
   font-size: @defaultFontSize;
 	}
 	//fonts
-	@h1: 4rem;
+	@h1: 4.5rem;
 	@h2: 2.5rem;
 	@h3: 2rem;
 	@h4: 1.75rem;
@@ -80,6 +80,8 @@ html, body {
 	//children styling
 	@child-padding: 1rem;
 	@child-paragraph: .5rem 0rem .75rem 0rem;
+	@h2-padding: 1rem 1rem 1rem 0rem;
+	@h4-padding: 1rem 1rem 0.5rem 0rem;
 
 	// mobile breakpoint
 
@@ -136,32 +138,22 @@ html, body {
 		flex-direction: column;
 		align-items: center;
 		background-color: lightgrey;
-		padding: 2rem 1rem 1rem 1rem;
+		padding: 3rem 1rem 1rem 1rem;
 
 		@media(max-width: @mobileMode) {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
 			margin: 1rem;
 			padding: 2rem;
 		}
 
 		#main-intro {
 			display: flex;
+			
 			justify-content: center;
 			align-items: center;
 			@media(max-width: @mobileMode) {
 				display: flex;
 				flex-direction: row-reverse;
 				align-items: flex-start;
-				h1 {
-					order: 0; 
-					width: 100%;
-				}
-				.mainimage {
-					order: 1;
-					width: 100%;
-				}
 			}	
 			h1 {
 				order: 0; 
@@ -173,7 +165,7 @@ html, body {
 			}
 		}
 		h2 {
-			padding: @child-padding;
+			padding: @h2-padding;
 		}
 		p {
 			padding: @child-padding;
@@ -206,17 +198,66 @@ html, body {
 			width: 70%;
 			padding: @child-padding;
 			h2 {
-				padding-bottom: 1.5rem;
+				padding: 1.5rem 0rem .5rem 0rem;
 			}
 			p {
 				padding: @child-paragraph;
 			}
+			h4 {
+				padding: @h4-padding;
+			}
+			.small-images {
+				width: 45%;
+				@media(max-width: @mobileMode) {
+					width: 80%;
+			}
+			}
+			li{
+				font-size: @h5;
+				padding: @h4-padding;
+			}
+			article {
+				h1 {
+					color: rgb(236, 3, 73);
+					text-align: center;
+					text-decoration: underline;
+				}
+				p {
+					padding: 1.5rem 0rem;
+				}
+				h3 {
+					padding: 1.5rem 0rem;
+				}
+				.associates {
+					border: 2px dashed rgb(236, 3, 73);
+					width: 50%;
+					align-items: center;
+					display: flex;
+					flex-wrap: wrap;
+					
+					padding: .5rem;
+					margin: .5rem;
+					@media(max-width: @mobileMode) {
+						width: 90%;
+				}
+				}
+				.pics {
+					@media(max-width: @mobileMode) {
+						width: 100%;
+						display: flex;
+						flex-direction: column-reverse;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+			}
 		}
 		.list { 
-			order: 1
+			order: 1;
 			width: 30%;
 			padding: @child-padding;
 			background-color: whitesmoke;
+			line-height: 2;
 			li {
 				padding: @child-paragraph
 			}
